@@ -51,7 +51,62 @@ const quizData = [
         },
         "correct_answers": ["A", "B", "C", "D"],
         "explanation": "All options are correct."
+    },
+    {
+        "question": "Why should a school have a motto? Check all that apply.",
+        "type": "checkbox",
+        "options": {
+            "A": "To promote unity among learners",
+            "B": "To promote patriotism",
+            "C": "To promote morals among learners.",
+            "D": "A school motto helps a school to set goals to be followed."
+        },
+        "correct_answers": ["A", "B", "C", "D"],
+        "explanation": "Options A, B, C, and D are correct."
+    },
+    {
+        "question": "Mention any one social activity practiced in our community.",
+        "type": "text",
+        "correct_answers": [
+            "Circumcision",
+            "Introduction in marriages",
+            "Weddings",
+            "Naming of children",
+            "Initiation ceremonies",
+            "Burials",
+            "Funeral rites"
+        ],
+        "explanation": "These are examples of social activities practiced in our community."
+    },
+    {
+        "question": "Why are most game parks found in the tropical regions of East Africa? Check all that apply.",
+        "type": "checkbox",
+        "options": {
+            "A": "There is good pasture in tropical regions for wild animals.",
+            "B": "Tropical regions have warm weather that favors wild animals.",
+            "C": "It has a complete food chain.",
+            "D": "High elevation that offers cooler climates."
+        },
+        "correct_answers": ["A", "B", "C"],
+        "explanation": "Options A, B, and C are correct. Tropical regions of East Africa provide good pasture, warm weather, and sufficient water sources for wild animals, making them suitable for game parks."
+    },
+    {
+        "question": "Give any two factors that made Mau-Mau rebellion last for long in Kenya.",
+        "type": "checkbox",
+        "options": {
+            "A": "It had skilled fighters from World War II.",
+            "B": "Internal divisions",
+            "C": "External support",
+            "D": "It was organized by skilled and experienced leaders."
+    
+        },
+        "correct_answers": ["A", "D"],
+        "explanation": "Options A and D are correct."
     }
+    
+    
+    
+    
 ];
 
 function generateQuiz() {
