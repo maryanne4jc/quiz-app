@@ -1,19 +1,29 @@
 /* Add your CSS styles here */
 /* This is just an example, you can customize it as needed */
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', Arial, sans-serif; /* Use Poppins font for headings */
+    margin: 20px auto; /* Add margin on top and bottom, and auto on left and right to center the content */
+    max-width: 800px; /* Set a maximum width for the content */
+    padding: 20px; /* Add padding inside the content */
 }
 
 .question {
     margin-bottom: 20px;
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .options {
     margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
 }
 
 input[type="text"] {
-    width: 80%; /* Make text input fields 100% width */
+    width: 80%;
     padding: 8px;
     font-size: 16px;
 }
@@ -25,8 +35,17 @@ button {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 button:hover {
     background-color: #0056b3;
+}
+
+h1 {
+    text-align: center; /* Center the heading */
+    font-size: 2em; /* Larger font size */
+    border-bottom: 2px solid #ccc; /* Grey underline */
+    padding-bottom: 5px; /* Add padding below the underline */
+    margin-bottom: 20px; /* Add margin below the heading */
 }

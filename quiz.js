@@ -102,11 +102,136 @@ const quizData = [
         },
         "correct_answers": ["A", "D"],
         "explanation": "Options A and D are correct."
+    },
+    {
+        "question": "How is the internet better than Newspapers as a means of communication?",
+        "type": "text",
+        "correct_answers": [
+            "The internet has a wider coverage than Newspapers.",
+            "Buying data to surf the internet is cheaper than buying Newspapers on a daily basis.",
+            "The internet is readily available and easily accessed by most people at any time unlike Newspapers which can’t be accessed at any time.",
+            "The internet caters for a global village whereas Newspapers cater for regions."
+        ],
+        "explanation": "All answers are correct. The internet has various advantages over newspapers in terms of wider coverage, cost-effectiveness, accessibility, and global reach."
+    },
+    {
+        "question": "How can the government overcome a deficit/loss type of budget? Check all that apply.",
+        "type": "checkbox",
+        "options": {
+            "A": "By diversifying the economy.",
+            "B": "By encouraging people to pay taxes.",
+            "C": "By encouraging foreign investors.",
+            "D": "By promoting the tourism industry."
+        },
+        "correct_answers": ["A", "B", "C", "D"],
+        "explanation": "All options are correct. Governments can overcome a deficit/loss type of budget by diversifying the economy, encouraging tax payments, attracting foreign investors, and promoting the tourism industry."
+    },
+    {
+        "question": "State any one role played by midwives in our community.",
+        "type": "multiple_choice",
+        "options": {
+            "A": "Helping pregnant mothers in giving birth.",
+            "B": "Providing medical advice to elderly individuals.",
+            "C": "Performing surgery in hospitals.",
+            "D": "Managing agricultural activities in rural areas."
+        },
+        "correct_answers": ["A"],
+        "explanation": "Option A is correct. Midwives primarily assist pregnant mothers during childbirth, providing essential care and support."
+    },
+    {
+        "question": "Which of the following are ways the youth can be supported in order to fight poverty and unemployment? Check all that apply.",
+        "type": "checkbox",
+        "options": {
+            "A": "By creating job opportunities for them.",
+            "B": "Giving them simple loans to start up businesses.",
+            "C": "Encouraging them to steal.",
+            "D": "Encouraging them to form SACCOS."
+        },
+        "correct_answers": ["A", "B", "D"],
+        "explanation": "Options A and B  and D are correct."
+    },
+    {
+        "question": "Give three ways the Arabs contributed to the development of trade in East Africa.",
+        "type": "checkbox",
+        "options": {
+            "A": "They introduced cowrie shells which acted as a form of money or medium of exchange.",
+            "B": "They looted a lot of property.",
+            "C": "They introduced new items of trade like mirrors, beads, and cloth.",
+            "D": "They established a trading empire at the coast (Zenj empire)."
+        },
+        "correct_answers": ["A", "C", "D"],
+        "explanation": "Options A, C, and D are correct. Arabs contributed to trade in East Africa by introducing cowrie shells as currency, bringing new trade items, and establishing trading empires. Option B is incorrect as it does not contribute positively to trade development."
+    },
+    {
+        "question": "Name one factor the Bantu were looking for during their migration.",
+        "type": "text",
+        "correct_answers": [
+            "Fertile grounds",
+            "Soils for farming",
+            "Areas with good or favourable climate"
+        ],
+        "explanation": "All answers are correct. The Bantu people sought fertile grounds, soils suitable for farming, and areas with good or favorable climates during their migration."
+    },
+    {
+        "question": "Give any one way the Bachwezi contributed to the development of farming in Uganda.",
+        "type": "text",
+        "correct_answers": [
+            "They introduced long horned cattle.",
+            "They introduced better farming methods.",
+            "They introduced coffee growing.",
+            "They introduced iron smelting where better farming tools were made which improved on food production."
+        ],
+        "explanation": "All options are correct. The Bachwezi contributed to the development of farming in Uganda by introducing long-horned cattle, better farming methods, coffee growing, and iron smelting for the production of better farming tools."
+    },
+    {
+        "question": "The arrow of a wind vane was seen pointing to the South on a windy day. To which direction was the wind blowing?",
+        "type": "multiple_choice",
+        "options": {
+            "A": "To the North",
+            "B": "To the East",
+            "C": "To the South",
+            "D": "To the West"
+        },
+        "correct_answers": ["A"],
+        "explanation": "Option A is correct. The arrow of the wind vane points to the direction where the wind is coming from, so if it points to the South, the wind is blowing from the South towards the North."
+    },
+    {
+        "question": "How do warm ocean currents influence the climate of an area?",
+        "type": "multiple_choice",
+        "options": {
+            "A": "They cause rainfall.",
+            "B": "They lower temperatures.",
+            "C": "They increase air pressure.",
+            "D": "They decrease humidity."
+        },
+        "correct_answers": ["A"],
+        "explanation": "Option A is correct. Warm ocean currents contribute to increased evaporation rates, leading to higher humidity levels in the atmosphere and eventually causing rainfall in the affected area."
+    },
+    {
+        "question": "Why did movement of goods and people within East Africa reduce between 1977 and 2001?",
+        "type": "text",
+        "correct_answers": [
+            "The East African Community had collapsed by then.",
+            "There were misunderstandings among East African countries during that period.",
+            "There was restricted movement of people and goods since borders had been closed."
+        ],
+        "explanation": "All options are correct. Movement of goods and people within East Africa reduced between 1977 and 2001 due to the collapse of the East African Community, misunderstandings among East African countries, and restricted movement caused by closed borders."
+    },
+    {
+        "question": "What title is given to a person who represents a Commonwealth member country to another?",
+        "type": "multiple_choice",
+        "options": {
+            "A": "Ambassador",
+            "B": "Consul",
+            "C": "Diplomat",
+            "D": "High commissioner"
+        },
+        "correct_answers": ["D"],
+        "explanation": "Option D is correct. A person who represents a Commonwealth member country to another is called a high commissioner."
     }
     
     
-    
-    
+
 ];
 
 function generateQuiz() {
