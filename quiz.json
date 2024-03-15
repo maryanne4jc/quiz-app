@@ -1,0 +1,13 @@
+{
+    "question": "Give any two factors that made Mau-Mau rebellion last for long in Kenya.",
+    "type": "checkbox",
+    "options": {
+        "A": "It had skilled fighters from World War II.",
+        "B": "Internal divisions",
+        "C": "External support",
+        "D": "It was organized by skilled and experienced leaders."
+
+    },
+    "correct_answers": ["A", "D"],
+    "explanation": "Options A and D are correct."
+}
