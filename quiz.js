@@ -260,10 +260,80 @@ function generateQuiz() {
     });
 }
 
-function submitQuiz() {
-    // Your submission logic here
-    alert("Submitting quiz...");
+// Get all input fields including text inputs, radio buttons, and checkboxes
+const allInputs = document.querySelectorAll('input[type="text"], input[type="radio"], input[type="checkbox"]');
+
+// Get the submit button
+const submitButton = document.querySelector('button');
+
+// Function to check if all required inputs are filled
+function checkInputs() {
+    let allFilled = true;
+
+    // Check text inputs
+    const textInputs = document.querySelectorAll('input[type="text"]');
+    textInputs.forEach(input => {
+        if (!input.value.trim()) {
+            allFilled = false;
+        }
+    });
+
+    // Check radio buttons and checkboxes
+    const radioCheckboxes = document.querySelectorAll('input[type="radio"], input[type="checkbox"]');
+    radioCheckboxes.forEach(input => {
+        const groupName = input.getAttribute('name');
+        if (!document.querySelector(`input[name="${groupName}"]:checked`)) {
+            allFilled = false;
+        }
+    });
+
+    return allFilled;
 }
+
+
+// Add event listener to each input field
+allInputs.forEach(input => {
+    input.addEventListener('input', () => {
+        if (checkInputs()) {
+            submitButton.disabled = false; // Enable the submit button
+        } else {
+            submitButton.disabled = true; // Keep the submit button disabled
+        }
+    });
+});
+
+
+function submitQuiz() {
+    // Check if all required inputs are filled
+    if (!checkInputs()) {
+        alert("Please fill out all questions before submitting.");
+        
+        // Add asterisk to unanswered question numbers
+        const quizContainer = document.getElementById('quiz-container');
+        quizData.forEach((questionData, index) => {
+            const inputElements = quizContainer.querySelectorAll(`input[name="question${index}"]`);
+            const answered = Array.from(inputElements).some(input => input.checked || (input.type === 'text' && input.value.trim()));
+            const questionNumber = index + 1;
+            const questionLabel = quizContainer.querySelector(`.question:nth-of-type(${questionNumber}) strong`);
+            if (!answered && questionLabel) {
+                const asterisk = document.createElement('span');
+                asterisk.textContent = ' *';
+                asterisk.classList.add('red-asterisk');
+                questionLabel.appendChild(asterisk);
+            }
+        });
+
+        return; // Stop the submission process
+    }
+
+    // Proceed with submission logic
+    window.location.href = "results.html"; // Redirect the user to the results page
+}
+
+
+
+
+
 
 // Call the function to generate the quiz interface
 generateQuiz();

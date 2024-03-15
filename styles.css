@@ -6,6 +6,8 @@ body {
     margin: 20px auto; /* Add margin on top and bottom, and auto on left and right to center the content */
     max-width: 800px; /* Set a maximum width for the content */
     padding: 20px; /* Add padding inside the content */
+    background-color: #f7f3e9; /* Light Gray */
+    font-size: 18px;
 }
 
 .question {
@@ -22,6 +24,7 @@ body {
     border-radius: 5px;
 }
 
+
 input[type="text"] {
     width: 80%;
     padding: 8px;
@@ -36,7 +39,11 @@ button {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    font-size: 18px; /* Set font size to 18px */
+    display: block; /* Change button display to block */
+    margin: 0 auto; /* Center the button horizontally */
 }
+
 
 button:hover {
     background-color: #0056b3;
@@ -44,8 +51,55 @@ button:hover {
 
 h1 {
     text-align: center; /* Center the heading */
-    font-size: 2em; /* Larger font size */
+    font-size: 3em; /* Larger font size */
+    font-weight: 300;
     border-bottom: 2px solid #ccc; /* Grey underline */
     padding-bottom: 5px; /* Add padding below the underline */
     margin-bottom: 20px; /* Add margin below the heading */
 }
+
+input[type="text"] {
+    width: 80%;
+    padding: 8px;
+    font-size: 16px;
+    /* border: 1px solid #ccc;  */
+    border: none;
+    border-radius: 5px; /* Round the borders */
+    transition: box-shadow 0.3s ease; /* Add transition for box shadow */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Add a slight box shadow */
+}
+
+input[type="text"]:focus {
+    border-color: transparent; /* Set border color to transparent when focused */
+    outline: none; /* Remove default outline */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Add a slight box shadow when focused */
+    border-radius: 5px; /* Round the borders */
+}
+
+input[type="radio"] {
+    margin-right: 5px; /* Add spacing between radio button and label */
+    margin-bottom: 20px;
+}
+
+/* Increase the size of the radio buttons */
+.options input[type="radio"] {
+    transform: scale(1.5); /* Adjust the scale factor to increase or decrease the size */
+}
+
+.options input[type="checkbox"] {
+    transform: scale(1.5);
+    margin-bottom: 20px; /* Adjust the scale factor to increase or decrease the size */
+}
+
+#quiz-container {
+    margin-bottom: 20px; /* Add margin-bottom to create space between the quiz container and the button */
+}
+
+.red-asterisk {
+    color: red;
+}
+
+
+
+
+
