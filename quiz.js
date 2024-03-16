@@ -370,4 +370,3 @@ function updateProgress() {
 allInputs.forEach(input => {
     input.addEventListener('input', updateProgress);
 });
-
