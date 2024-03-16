@@ -1,20 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quiz</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css"> <!-- Add link to external CSS file -->
 </head>
+
 <body>
 
-<h1>Quiz</h1>
+    <h1>Quiz</h1>
+    <div id="progress-bar-container">
+        <div id="progress-bar"></div>
+    </div>
 
-<div id="quiz-container"></div>
+    <div id="quiz-container"></div>
 
-<button onclick="submitQuiz()">Submit</button>
+    <button onclick="submitQuiz()">Submit</button>
 
-<script src="quiz.js"></script>
+    <script src="quiz.js"></script>
 
 </body>
+
 </html>

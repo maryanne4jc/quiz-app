@@ -244,21 +244,32 @@ function generateQuiz() {
         
         if (questionData.type === 'text') {
             questionDiv.innerHTML += `<input type="text" name="question${index}"><br>`;
+            const textInput = questionDiv.querySelector(`input[type="text"]`);
+            textInput.addEventListener('input', updateProgress); // Add event listener for text input
         } else if (questionData.type === 'multiple_choice') {
             questionDiv.classList.add('options');
             Object.entries(questionData.options).forEach(([key, value]) => {
                 questionDiv.innerHTML += `<input type="radio" name="question${index}" value="${key}"> ${value}<br>`;
+            });
+            const radioInputs = questionDiv.querySelectorAll(`input[type="radio"]`);
+            radioInputs.forEach(input => {
+                input.addEventListener('input', updateProgress); // Add event listener for radio input
             });
         } else if (questionData.type === 'checkbox') {
             questionDiv.classList.add('options');
             Object.entries(questionData.options).forEach(([key, value]) => {
                 questionDiv.innerHTML += `<input type="checkbox" name="question${index}" value="${key}"> ${value}<br>`;
             });
+            const checkboxInputs = questionDiv.querySelectorAll(`input[type="checkbox"]`);
+            checkboxInputs.forEach(input => {
+                input.addEventListener('input', updateProgress); // Add event listener for checkbox input
+            });
         }
 
         quizContainer.appendChild(questionDiv);
     });
 }
+
 
 // Get all input fields including text inputs, radio buttons, and checkboxes
 const allInputs = document.querySelectorAll('input[type="text"], input[type="radio"], input[type="checkbox"]');
@@ -337,3 +348,26 @@ function submitQuiz() {
 
 // Call the function to generate the quiz interface
 generateQuiz();
+
+// Define a global variable to track the progress
+let progress = 0;
+
+// Update the progress function whenever the user answers a question
+function updateProgress() {
+    // Increment the progress by 1 for each answered question
+    progress++;
+
+    // Calculate the percentage of progress
+    const totalQuestions = quizData.length;
+    const percentage = (progress / totalQuestions) * 100;
+
+    // Update the width of the progress bar
+    const progressBar = document.getElementById('progress-bar');
+    progressBar.style.width = `${percentage}%`;
+}
+
+// Add an event listener to each input field to update the progress
+allInputs.forEach(input => {
+    input.addEventListener('input', updateProgress);
+});
+
