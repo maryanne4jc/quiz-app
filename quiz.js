@@ -318,28 +318,41 @@ function submitQuiz() {
     // Check if all required inputs are filled
     if (!checkInputs()) {
         alert("Please fill out all questions before submitting.");
-        
-        // Add asterisk to unanswered question numbers
-        const quizContainer = document.getElementById('quiz-container');
-        quizData.forEach((questionData, index) => {
-            const inputElements = quizContainer.querySelectorAll(`input[name="question${index}"]`);
-            const answered = Array.from(inputElements).some(input => input.checked || (input.type === 'text' && input.value.trim()));
-            const questionNumber = index + 1;
-            const questionLabel = quizContainer.querySelector(`.question:nth-of-type(${questionNumber}) strong`);
-            if (!answered && questionLabel) {
-                const asterisk = document.createElement('span');
-                asterisk.textContent = ' *';
-                asterisk.classList.add('red-asterisk');
-                questionLabel.appendChild(asterisk);
-            }
-        });
-
         return; // Stop the submission process
     }
 
     // Proceed with submission logic
-    window.location.href = "results.html"; // Redirect the user to the results page
+    // Calculate the score
+    let correctAnswers = 0;
+    quizData.forEach((question, index) => {
+        if (question.type === 'text') {
+            const userInput = document.querySelector(`input[name="question${index}"]`).value.trim().toLowerCase();
+            if (question.correct_answers.includes(userInput)) {
+                correctAnswers++;
+            }
+        } else if (question.type === 'multiple_choice') {
+            const userChoice = document.querySelector(`input[name="question${index}"]:checked`);
+            if (userChoice && question.correct_answers.includes(userChoice.value)) {
+                correctAnswers++;
+            }
+        } else if (question.type === 'checkbox') {
+            const userChoices = document.querySelectorAll(`input[name="question${index}"]:checked`);
+            const userSelected = Array.from(userChoices).map(choice => choice.value).sort().join('');
+            const correctSelected = question.correct_answers.sort().join('');
+            if (userSelected === correctSelected) {
+                correctAnswers++;
+            }
+        }
+    });
+
+    // Calculate the percentage
+    const totalQuestions = quizData.length;
+    const scorePercentage = (correctAnswers / totalQuestions) * 100;
+
+    // Redirect to the results page and pass the score as a query parameter
+    window.location.href = `results.html?score=${scorePercentage}`;
 }
+
 
 
 
