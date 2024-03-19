@@ -265,7 +265,7 @@ function generateQuiz() {
                 input.addEventListener('input', updateProgress); // Add event listener for checkbox input
             });
         }
-
+        console.log(quizContainer);
         quizContainer.appendChild(questionDiv);
     });
 }
