@@ -49,21 +49,23 @@
     const input = document.querySelector(`input[name="question${questionIndex}"]`);
     if (input) {
         if (input.type === 'text') {
-            return input.value;
+            return input.value.trim(); // For text inputs, return the input value
         } else if (input.type === 'radio') {
-            if (input.checked) {
-                return input.value; // Return the value of the checked radio button
+            const checkedRadio = document.querySelector(`input[name="question${questionIndex}"]:checked`);
+            if (checkedRadio) {
+                return checkedRadio.value; // For radio buttons, return the value of the checked radio button
             }
         } else if (input.type === 'checkbox') {
             const checkedCheckboxes = document.querySelectorAll(`input[name="question${questionIndex}"]:checked`);
             if (checkedCheckboxes.length > 0) {
-                // Return an array of values of checked checkboxes
+                // For checkboxes, return an array of values of checked checkboxes
                 return Array.from(checkedCheckboxes).map(checkbox => checkbox.value).join(', ');
             }
         }
     }
-    return ''; // Return an empty string if input is null or no input element found
+    return 'Not answered'; // Return 'Not answered' if no input is found
 }
+
 
 
 
