@@ -362,7 +362,6 @@ function submitQuiz() {
 // Call the function to generate the quiz interface
 generateQuiz();
 
-console.log("Value of quizContainer:", quizContainer);
 
 // Define a global variable to track the progress
 let progress = 0;
