@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function() {
             // Display user's answer
             const userAnswer = getUserAnswer(index);
             console.log('User Answer:', userAnswer);
-            questionDiv.innerHTML += `<p>Your Answer: ${userAnswer}</p>`;
+            // questionDiv.innerHTML += `<p>Your Answer: ${userAnswer}</p>`;
 
             // Display correct answer
             const correctAnswer = getCorrectAnswer(questionData);
