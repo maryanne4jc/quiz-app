@@ -3,43 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Primary 6 Science Quiz</title>
-    <!-- Add your CSS stylesheets here -->
-    <style>
-        /* Your custom styles go here */
-    </style>
+    <title>Quiz Website</title>
 </head>
 <body>
-    <h1>Primary 6 Science Quiz</h1>
-    <form id="quiz-form">
-        <!-- Questions will be populated dynamically here -->
-        <div class="question">
-            <!-- Questions and options will be inserted here using JavaScript -->
-        </div>
-        <!-- Repeat for other questions -->
-
-        <!-- Submit button -->
-        <button type="submit">Submit</button>
-    </form>
-
-    <script src="quizdata.js"></script> <!-- Include the quiz data -->
-    <script>
-        // Populate the questions and options dynamically
-        const questionsDiv = document.querySelector('.question');
-
-        quizData.questions.forEach((question, index) => {
-            const questionElement = document.createElement('div');
-            questionElement.innerHTML = `
-                <p>${index + 1}. ${question.question}</p>
-                ${question.options.map(option => `
-                    <label>
-                        <input type="radio" name="q${index}" value="${option}">
-                        ${option}
-                    </label>
-                `).join('')}
-            `;
-            questionsDiv.appendChild(questionElement);
-        });
-    </script>
+    <main class="main">
+        <header class="header">
+            <a href="#" class="logo">Quiz.</a>
+            <nav class="navbar">
+                <a href="#" class="">Home</a>
+                <a href="#" class="">About</a>
+                <a href="#" class="">Services</a>
+                <a href="#" class=""></a>
+            </nav>
+        </header>
+    </main>
+    
 </body>
 </html>
