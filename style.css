@@ -7,6 +7,8 @@
 
 body {
     color: #100f0f;
+    background:  #dec4c4;
+    overflow: hidden;
 }
 
 .header {
@@ -49,14 +51,29 @@ body {
     background: url('images/flowers.jpg') no-repeat;
     background-size: cover;
     background-position: center;
+    pointer-events: auto;
+    transition: .3s ease;
+}
+
+.main.active {
+    filter: blur(15px);
+    pointer-events: none;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+    width: 200%;
 }
 
 .home {
+    position: relative;
+    left: -50%;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    height: 100vh;
+    /* height: 100vh; */
 }
 
 .home-content {
@@ -104,11 +121,20 @@ body {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%) scale(.9);
     width: 500px;
     background: #fff;
     border-radius: 6px;
     padding: 10px 25px;
+    opacity: 0;
+    pointer-events: none;
+    transition: .3s ease;
+}
+
+.popup-info.active {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50%, -50%) scale(1);
 }
 
 .popup-info h2 {
@@ -130,6 +156,7 @@ body {
     align-items: center;
     border-top: 1px solid #999;
     margin-top: 10px;
+    padding: 15px 0 7px;
 }
 
 .popup-info .btn-group .info-btn {
@@ -147,4 +174,33 @@ body {
     color: #fff;
     font-weight: 600;
     box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    cursor: pointer;
+    transition: .5s;
+}
+
+.popup-info .btn-group .info-btn:nth-child(1) {
+    background: transparent;
+    color: #c40094;
+}
+
+.popup-info .btn-group .info-btn:nth-child(1):hover {
+    background-color: #c40094;
+    color: #fff;
+}
+
+.popup-info .btn-group .info-btn:nth-child(2):hover {
+    background-color: #950170;
+    border-color: #950170;
+}
+
+.quiz-section {
+    position: relative;
+    left: -50%;
+    width: 100%;
+    background: seagreen;
+    transition: .8s ease-in-out;
+}
+
+.quiz-section.active {
+
 }
