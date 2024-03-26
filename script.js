@@ -18,10 +18,13 @@ exitBtn.onclick = () => {
     main.classList.remove('active');
 }
 
-continueBtn.onclick = () => {
+// Event handler for continue button click
+continueBtn.onclick = (event) => {
+    event.preventDefault(); // Prevent default action
     quizSection.classList.add('active');
-    // popupInfo.classList.remove('active');
-    // main.classList.remove('active');
+    // Hide popup-info and main by removing 'active' class
+    popupInfo.classList.remove('active');
+    main.classList.remove('active');
 }
 
 
