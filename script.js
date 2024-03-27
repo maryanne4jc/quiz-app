@@ -31,6 +31,7 @@ continueBtn.onclick = (event) => {
 
     showQuestions(0);
     questionCounter(1);
+    headerScore();
 }
 
 
@@ -50,6 +51,7 @@ nextBtn.onclick = () => {
 
         questionNumb++;
         questionCounter(questionNumb);
+        nextBtn.classList.remove('active');
     }
 
     else {
@@ -92,6 +94,8 @@ function optionSelected(answer) {
     if (userAnswer == correctAnswer) {
         
         answer.classList.add('correct');
+        userScore += 1;
+        headerScore();
     }
     else {
 
@@ -109,6 +113,7 @@ function optionSelected(answer) {
     for (let i = 0; i < allOptions; i++) {
         optionList.children[i].classList.add('disabled');
     }
+    nextBtn.classList.add('active');
 }
 
 function questionCounter(index) {
@@ -118,6 +123,7 @@ function questionCounter(index) {
 
 function headerScore() {
     const headerScoreText = document.querySelector('.header-score');
+    headerScoreText.textContent = `Score: ${userScore} / ${questions.length}`
 }
 
 
