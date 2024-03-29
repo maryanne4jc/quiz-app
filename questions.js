@@ -1,65 +1,65 @@
 let questions = [
     {
         numb: 1,
-        question: "What is photosynthesis?",
-        answer: "C: The process by which plants make their own food",
+        question: "How do scientists categorize animals in the environment?",
+        answer: "C: Into vertebrates and invertebrates",
         options: [
-            "A. Soil erosion",
-            "B. The process by which children grow",
-            "C: The process by which plants make their own food",
-            "D: I don't know"
+            "A: By their size and where they live",
+            "B: By their color and how they act",
+            "C: Into vertebrates and invertebrates",
+            "D: Based on what they eat and how long they live"
 
         ]
     },
 
     {
         numb: 2,
-        question: "Which of the following is a mammal?",
-        answer: "A: Dolphin",
+        question: "Which of the following is a characteristic of vertebrates?",
+        answer: "A: They have a backbone",
         options: [
-            "A: Dolphin",
-            "B: Shark",
-            "C: Crocodile",
-            "D: Octopus"
+            "A: They have a backbone",
+            "B: They have feathers",
+            "C: They have exoskeletons",
+            "D: They have gills"
 
         ]
     },
 
     {
         numb: 3,
-        question: "What is the closest planet to the Sun?",
-        answer: "B: Mercury",
+        question: "Vertebrates are classified into two groups, which are:",
+        answer: "C: Warm-blooded vertebrates and cold-blooded vertebrates",
         options: [
-            "A: Earth",
-            "B: Mercury",
-            "C: Mars",
-            "D: Venus"
+            "A: Birds and mammals",
+            "B: Reptiles and amphibians",
+            "C: Warm-blooded vertebrates and cold-blooded vertebrates",
+            "D: Fish and amphibians"
 
         ]
     },
 
     {
         numb: 4,
-        question: "What is the chemical symbol for water?",
-        answer: "D: H2O",
+        question: "What are warm-blooded animals?",
+        answer: "B: Vertebrates that keep their body temperatures constant or slightly change",
         options: [
-            "A: CO2",
-            "B: NaCl",
-            "C: O2",
-            "D: H2O"
+            "A: Vertebrates that have scales",
+            "B: Vertebrates that keep their body temperatures constant or slightly change",
+            "C: Vertebrates that live in cold climates",
+            "D: Vertebrates that have feathers"
 
         ]
     },
 
     {
         numb: 5,
-        question: "What is the process by which plants release oxygen into the air?",
-        answer: "A: Photosynthesis",
+        question: "What are examples of warm-blooded animals?",
+        answer: "D: All birds and mammals",
         options: [
-            "A: Photosynthesis",
-            "B: Respiration",
-            "C: Transpiration",
-            "D: Combustion"
+            "A: All reptiles and amphibians",
+            "B: All fish and amphibians",
+            "C: All reptiles and mammals",
+            "D: All birds and mammals"
 
         ]
     }
